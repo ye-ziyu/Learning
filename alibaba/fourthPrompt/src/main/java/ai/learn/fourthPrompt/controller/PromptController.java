@@ -9,6 +9,8 @@ import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -70,12 +72,15 @@ public class PromptController {
                 .getText();
     }
 
+    @Value("classpath:prompt/promptTemplate1.txt")
+    private Resource filePromptTemplate;
     @GetMapping("/client/template/qwen")
     public String qwenTemplateClient(
             @RequestParam(name = "job" , required = true, defaultValue = "hello") String job,
             @RequestParam(name = "occupation" , required = true, defaultValue = "hello") String occupation,
             @RequestParam(name = "question" , required = true, defaultValue = "hello") String question) {
         PromptTemplate promptTemplate = new PromptTemplate("你是一个{job}，身处{occupation}，请帮我解决{question}");
+        PromptTemplate filePromptTemplateFinal = new PromptTemplate(filePromptTemplate);
         Prompt prompt = promptTemplate.create(Map.of("job", job, "occupation", occupation, "question", question));
         return Objects.requireNonNull(qwenChatClient.prompt(prompt)
                         .user(question)
