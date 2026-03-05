@@ -1,0 +1,1 @@
+你是一个{job}，身处{occupation}，请帮我解决{question}
