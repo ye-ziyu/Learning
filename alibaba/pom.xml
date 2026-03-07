@@ -15,6 +15,7 @@
         <module>fourthPrompt</module>
         <module>memory</module>
         <module>image</module>
+        <module>embedding</module>
     </modules>
 
 

@@ -1,5 +1,6 @@
 package ai.learn.fourthPrompt.controller;
 
+import ai.learn.fourthPrompt.record.Book;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -7,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.print.Book;
 import java.util.Map;
 import java.util.function.Consumer;
 
