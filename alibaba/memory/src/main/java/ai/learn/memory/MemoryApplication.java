@@ -1,13 +1,13 @@
-package ai.learn.thirdMuLtiAI;
+package ai.learn.memory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MultiAIApplication {
+public class MemoryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MultiAIApplication.class, args);
+        SpringApplication.run(MemoryApplication.class, args);
     }
 
 }

@@ -11,8 +11,10 @@
     <modules>
         <module>first</module>
         <module>second</module>
-        <module>thirdMuLtiAI</module>
+        <module>thirdMultiAI</module>
         <module>fourthPrompt</module>
+        <module>memory</module>
+        <module>image</module>
     </modules>
 
 

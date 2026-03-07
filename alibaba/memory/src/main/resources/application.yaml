@@ -1,0 +1,30 @@
+server :
+  port:
+    8001
+  #大模型对话中文乱码UTF8编码处理
+  servlet:
+    encoding:
+      enabled:
+        true
+      force:
+        true
+      charset:
+        UTF-8
+
+spring:
+  application:
+    name:
+      first
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      timeout: 10s
+  #  阿里云大模型配置
+  ai:
+    dashscope:
+      api-key:
+        ${ALIYU_KEY}
+      base-url:
+        https://dashscope.aliyuncs.com/compatible-mode/v1

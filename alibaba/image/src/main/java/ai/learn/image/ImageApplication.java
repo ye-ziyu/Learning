@@ -1,13 +1,13 @@
-package ai.learn.thirdMuLtiAI;
+package ai.learn.image;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MultiAIApplication {
+public class ImageApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MultiAIApplication.class, args);
+        SpringApplication.run(ImageApplication.class, args);
     }
 
 }
