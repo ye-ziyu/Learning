@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
   servlet:
     encoding:
       charset: utf-8
@@ -7,10 +7,14 @@ server:
       force: true
 spring:
   application:
-    name: embedding
+    name: first
 
-
-  # SpringAI Alibaba 配置
+  # Redis Stack 配置
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  #  阿里云大模型配置
   ai:
     dashscope:
       api-key: ${ALIYU_KEY}
@@ -18,21 +22,14 @@ spring:
         https://dashscope.aliyuncs.com/compatible-mode/v1
       chat:
         options:
-          model: qwen-plus
+          model:
+            qwen3-max
       embedding:
         options:
-          model: text-embedding-v3
-    # Redis Vector Store 配置
+          model:
+            text-embedding-v3
     vectorstore:
       redis:
         initialize-schema: true
         index-name: custom-index
         prefix: custom-prefix
-  # Redis Stack 配置
-  data:
-    redis:
-      host: localhost
-      port: 6379
-
-  
-

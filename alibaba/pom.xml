@@ -16,6 +16,7 @@
         <module>memory</module>
         <module>image</module>
         <module>embedding</module>
+        <module>RAG</module>
     </modules>
 
 
