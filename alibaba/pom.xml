@@ -17,6 +17,9 @@
         <module>image</module>
         <module>embedding</module>
         <module>RAG</module>
+        <module>tool</module>
+        <module>mcp</module>
+        <module>mcp</module>
     </modules>
 
 

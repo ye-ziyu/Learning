@@ -1,0 +1,24 @@
+server :
+  port:
+    8001
+  #大模型对话中文乱码UTF8编码处理
+  servlet:
+    encoding:
+      enabled:
+        true
+      force:
+        true
+      charset:
+        UTF-8
+
+spring:
+  application:
+    name:
+      first
+# ====mcp-server Config=============
+  ai:
+    mcp:
+      server:
+        type: async #异步
+        name : customer-define-mcp-server #自定义名称
+        version: 1.0.0 #自定义版本
